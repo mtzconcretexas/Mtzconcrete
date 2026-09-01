@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO values are updated automatically from site-config.js -->
+  <meta id="metaDescription" name="description" content="MTZ Concrete" />
+  <title id="pageTitle">MTZ Concrete</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- =========================================================
+       NAVIGATION
+       Edit links / company info in: site-config.js
+       ========================================================= -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="#home" class="brand">
+        <span class="brand-mark" id="brandShort">MTZ</span>
+        <span class="brand-copy" id="brandName">CONCRETE</span>
+      </a>
+
+      <div class="nav-links" id="navLinks"></div>
+
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" type="button">ES</button>
+        <a class="btn btn-small" id="navCallButton" href="#">Call Now</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO
+         Main texts are editable in site-config.js
+         ========================================================= -->
+    <section class="hero" id="home" data-section="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow" id="heroEyebrow"></div>
+          <h1 id="heroTitle"></h1>
+          <p class="hero-text" id="heroText"></p>
+
+          <div class="hero-buttons">
+            <a class="btn" href="#quote" id="heroQuoteButton"></a>
+            <a class="btn btn-ghost" id="heroPhoneButton" href="#"></a>
+          </div>
+
+          <div class="trust-row" id="trustRow"></div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-card-badge" id="heroCardBadge"></div>
+          <h2 id="heroCardTitle"></h2>
+          <p id="heroCardText"></p>
+          <a class="btn btn-block" href="#quote" id="heroCardButton"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVICES
+         To add/remove a service:
+         edit CONFIG.services in site-config.js
+         ========================================================= -->
+    <section class="section" id="services" data-section="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow" id="servicesEyebrow"></div>
+          <h2 id="servicesTitle"></h2>
+        </div>
+
+        <div class="cards" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PROJECTS
+         Add/remove project cards in CONFIG.projects
+         Images go inside assets/images/
+         ========================================================= -->
+    <section class="section dark-section" id="projects" data-section="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow" id="projectsEyebrow"></div>
+          <h2 id="projectsTitle"></h2>
+          <p id="projectsText"></p>
+        </div>
+
+        <div class="project-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVICE AREAS
+         Add/remove cities in CONFIG.serviceAreas
+         ========================================================= -->
+    <section class="section" id="areas" data-section="areas">
+      <div class="container split">
+        <div class="reveal">
+          <div class="eyebrow" id="areasEyebrow"></div>
+          <h2 id="areasTitle"></h2>
+          <p id="areasText"></p>
+        </div>
+
+        <div class="area-list reveal" id="areasList"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUOTE / CONTACT FORM
+         Fields can be modified directly below.
+         Backend connection options are explained in README.md.
+         ========================================================= -->
+    <section class="section quote-section" id="quote" data-section="quote">
+      <div class="container quote-grid">
+        <div class="reveal">
+          <div class="eyebrow" id="quoteEyebrow"></div>
+          <h2 id="quoteTitle"></h2>
+          <p id="quoteText"></p>
+
+          <div class="contact-direct">
+            <a id="contactPhone" href="#">
+              <strong id="contactPhoneText"></strong>
+              <span id="contactPhoneLabel"></span>
+            </a>
+
+            <a id="contactEmail" href="#">
+              <strong id="contactEmailText"></strong>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="quote-form reveal" id="quoteForm">
+          <label>
+            <span data-i18n="form.name">Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span data-i18n="form.phone">Phone</span>
+            <input type="tel" name="phone" required />
+          </label>
+
+          <label>
+            <span data-i18n="form.city">City / Project Location</span>
+            <input type="text" name="city" required />
+          </label>
+
+          <label>
+            <span data-i18n="form.projectType">Project Type</span>
+            <select name="project" id="projectTypeSelect"></select>
+          </label>
+
+          <label class="full">
+            <span data-i18n="form.details">Project Details</span>
+            <textarea name="details" rows="5"></textarea>
+          </label>
+
+          <label class="full upload">
+            <span data-i18n="form.photos">Project Photos</span>
+            <input type="file" name="photos" accept="image/*" multiple />
+          </label>
+
+          <button class="btn btn-block full" type="submit" id="submitButton"></button>
+          <p class="form-note full" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SOCIAL MEDIA
+         To activate a network:
+         set enabled:true + add its URL in site-config.js
+         ========================================================= -->
+    <section class="section social-section" id="social" data-section="social">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <div class="eyebrow" id="socialEyebrow"></div>
+          <h2 id="socialTitle"></h2>
+        </div>
+
+        <div class="social-grid reveal" id="socialGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer id="contact" data-section="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark" id="footerBrandShort">MTZ</span>
+          <span class="brand-copy" id="footerBrandName">CONCRETE</span>
+        </div>
+        <p id="footerTagline"></p>
+      </div>
+
+      <div class="footer-contact">
+        <a id="footerPhone" href="#"></a>
+        <a id="footerEmail" href="#"></a>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> <span id="copyrightName"></span>. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- IMPORTANT:
+       Load configuration BEFORE the website logic. -->
+  <script src="site-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

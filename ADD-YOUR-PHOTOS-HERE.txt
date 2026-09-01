@@ -1,0 +1,2 @@
+Place real MTZ project images in this folder.
+Example: driveway-austin.jpg
