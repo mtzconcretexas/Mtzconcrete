@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="metaDescription" name="description" content="MTZ Concrete">
+  <title>MTZ Concrete</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ============================================================
+       TOP STRIP
+       ============================================================ -->
+  <div class="top-strip" data-section="topStrip">
+    <div class="container top-strip-inner">
+      <span id="topStripText"></span>
+      <div class="top-langs">
+        <button class="top-lang active" data-lang="en">EN</button>
+        <span>|</span>
+        <button class="top-lang" data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-main" id="brandMain">MTZ</span>
+        <span class="brand-sub" id="brandSub">CONCRETE</span>
+      </a>
+
+      <nav class="desktop-nav" id="desktopNav"></nav>
+
+      <a class="nav-cta" id="navCall" href="#estimate">Get Estimate</a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="container mobile-menu-inner" id="mobileNav"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="home" data-section="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-shade"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow" id="heroEyebrow"></div>
+          <h1 id="heroTitle"></h1>
+          <p id="heroLead" class="hero-lead"></p>
+
+          <div class="hero-actions">
+            <a class="btn btn-orange" href="#estimate">
+              <span id="heroEstimateButton"></span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="btn btn-dark-outline" id="heroPhoneButton" href="#">
+              <span class="phone-icon">⌕</span>
+              <span id="heroPhoneText"></span>
+            </a>
+          </div>
+
+          <div class="hero-trust" id="heroTrust"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+         ============================================================ -->
+    <section class="services section-cream" id="services" data-section="services">
+      <div class="container">
+        <div class="center-heading">
+          <div class="eyebrow eyebrow-dark" id="servicesEyebrow"></div>
+          <h2 id="servicesTitle"></h2>
+          <p id="servicesLead"></p>
+        </div>
+
+        <div class="service-cards" id="servicesGrid"></div>
+
+        <div class="service-split">
+          <article class="split-card split-dark">
+            <div class="split-icon" data-icon="house"></div>
+            <div>
+              <h3 id="residentialTitle"></h3>
+              <p id="residentialText"></p>
+              <a href="#estimate" class="text-link">
+                <span id="residentialButton"></span><span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="split-card split-orange">
+            <div class="split-icon white-icon" data-icon="building"></div>
+            <div>
+              <h3 id="commercialTitle"></h3>
+              <p id="commercialText"></p>
+              <a href="#estimate" class="text-link">
+                <span id="commercialButton"></span><span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STANDARD
+         ============================================================ -->
+    <section class="standard section-black" data-section="standard">
+      <div class="container">
+        <div class="center-heading dark-heading">
+          <div class="eyebrow" id="standardEyebrow"></div>
+          <h2 id="standardTitle"></h2>
+        </div>
+
+        <div class="standard-grid" id="standardGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY
+         ============================================================ -->
+    <section class="gallery-section" id="projects" data-section="projects">
+      <div class="container">
+        <article class="gallery-card">
+          <div class="gallery-copy">
+            <div class="eyebrow" id="galleryEyebrow"></div>
+            <h2 id="galleryTitle"></h2>
+            <p id="galleryLead"></p>
+            <a href="#estimate" class="btn btn-white-outline">
+              <span id="galleryButton"></span><span>→</span>
+            </a>
+          </div>
+
+          <img
+            src="assets/images/mtz-project-gallery.jpg"
+            alt="MTZ Concrete project"
+            class="gallery-image"
+          >
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+         ============================================================ -->
+    <section class="process section-cream" data-section="process">
+      <div class="container">
+        <div class="center-heading">
+          <div class="eyebrow eyebrow-dark" id="processEyebrow"></div>
+          <h2 id="processTitle"></h2>
+        </div>
+
+        <div class="process-grid" id="processGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOCIAL
+         ============================================================ -->
+    <section class="social section-cream" id="social" data-section="social">
+      <div class="social-rings"></div>
+      <div class="container">
+        <div class="social-heading">
+          <div class="eyebrow eyebrow-dark" id="socialEyebrow"></div>
+          <h2 id="socialTitle"></h2>
+          <p id="socialLead"></p>
+        </div>
+
+        <div class="social-grid" id="socialGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICE AREA
+         ============================================================ -->
+    <section class="service-area" id="service-area" data-section="serviceArea">
+      <div class="container">
+        <div class="area-heading">
+          <div class="eyebrow light-eyebrow" id="areaEyebrow"></div>
+          <h2 id="areaTitle"></h2>
+          <p id="areaLead"></p>
+        </div>
+
+        <div class="area-list" id="areaList"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ESTIMATE
+         ============================================================ -->
+    <section class="estimate" id="estimate" data-section="estimate">
+      <div class="estimate-orange">
+        <div class="container estimate-intro">
+          <div class="eyebrow light-eyebrow" id="estimateEyebrow"></div>
+          <h2 id="estimateTitle"></h2>
+          <p id="estimateLead"></p>
+
+          <div class="estimate-benefits" id="estimateBenefits"></div>
+
+          <div class="estimate-contact">
+            <a id="estimatePhone" href="#"><span>⌕</span><strong id="estimatePhoneText"></strong></a>
+            <a id="estimateEmail" href="#"><span>✉</span><strong id="estimateEmailText"></strong></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="estimate-black">
+        <div class="container">
+          <form class="estimate-form" id="estimateForm">
+            <div class="field-row">
+              <label>
+                <span data-label="name"></span>
+                <input type="text" name="name" required>
+              </label>
+              <label>
+                <span data-label="phone"></span>
+                <input type="tel" name="phone" required>
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label>
+                <span data-label="email"></span>
+                <input type="email" name="email">
+              </label>
+              <label>
+                <span data-label="zip"></span>
+                <input type="text" name="zip" inputmode="numeric">
+              </label>
+            </div>
+
+            <label>
+              <span data-label="projectType"></span>
+              <select name="projectType" id="projectTypeSelect"></select>
+            </label>
+
+            <label>
+              <span data-label="details"></span>
+              <textarea name="details" rows="5"></textarea>
+            </label>
+
+            <label class="upload-field">
+              <span data-label="photos"></span>
+              <input type="file" name="photos" accept="image/*" multiple>
+            </label>
+
+            <button type="submit" class="btn btn-orange btn-submit" id="estimateSubmit"></button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" data-section="footer">
+    <div class="container footer-main">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-main" id="footerBrandMain">MTZ</span>
+          <span class="brand-sub" id="footerBrandSub">CONCRETE</span>
+        </div>
+        <p id="footerTagline"></p>
+      </div>
+
+      <div class="footer-links">
+        <a id="footerPhone" href="#"></a>
+        <a id="footerEmail" href="#"></a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © <span id="year"></span> <span id="copyrightName"></span>. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="site-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
