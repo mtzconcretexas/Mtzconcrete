@@ -219,175 +219,13 @@ function renderSocial() {
   setText("socialTitle", CONFIG.social.title);
   setText("socialLead", CONFIG.social.lead);
 
-  const grid = $("socialGrid");
-  grid.innerHTML = "";
-
-  CONFIG.social.networks.forEach(network => {
-    const hasUrl = Boolean(network.url);
-    const card = document.createElement(hasUrl ? "a" : "div");
-    card.className = "social-card";
-
-    if (hasUrl) {
-      card.href = network.url;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
-    }
-
-    const brandName = network.name.trim().toLowerCase();
-    const socialIcon = brandIconSvg(brandName) || iconSvg(network.icon);
-
-    card.innerHTML = `
-      <span class="social-number">${network.number}</span>
-      <div class="social-icon">${socialIcon}</div>
-      <h3>${network.name}</h3>
-      <p>MTZ CONCRETE</p>
-    `;
-
-    grid.appendChild(card);
-  });
-}
-
-function renderArea() {
-  setText("areaEyebrow", CONFIG.serviceArea.eyebrow);
-  setText("areaTitle", CONFIG.serviceArea.title);
-  setText("areaLead", CONFIG.serviceArea.lead);
-
-  const list = $("areaList");
-  list.innerHTML = "";
-
-  CONFIG.serviceArea.cities.forEach(city => {
-    const item = document.createElement("div");
-    item.className = "area-item";
-    item.innerHTML = `
-      <div class="area-pin">${iconSvg("pin")}</div>
-      <span>${city}</span>
-    `;
-    list.appendChild(item);
-  });
-}
-
-function renderEstimate() {
-  setText("estimateEyebrow", CONFIG.estimate.eyebrow);
-  setText("estimateTitle", CONFIG.estimate.title);
-  setText("estimateLead", CONFIG.estimate.lead);
-  setText("estimateSubmit", CONFIG.estimate.submitButton);
-
-  const benefits = $("estimateBenefits");
-  benefits.innerHTML = "";
-
-  CONFIG.estimate.benefits.forEach(item => {
-    const div = document.createElement("div");
-    div.textContent = text(item);
-    benefits.appendChild(div);
-  });
-
-  document.querySelectorAll("[data-label]").forEach(el => {
-    const key = el.dataset.label;
-    el.textContent = text(CONFIG.formLabels[key]);
-  });
-
-  const select = $("projectTypeSelect");
-  select.innerHTML = "";
-
-  CONFIG.estimate.projectTypes.forEach(item => {
-    const option = document.createElement("option");
-    option.value = item.en;
-    option.textContent = text(item);
-    select.appendChild(option);
-  });
-
-  $("formNote").textContent =
-    CONFIG.estimate.mode === "demo"
-      ? (
-          currentLang === "en"
-            ? "The form design is ready. Connect it to Make, Airtable or another backend when you are ready."
-            : "El formulario ya está listo. Después puedes conectarlo a Make, Airtable u otro sistema."
-        )
-      : "";
-}
-
-function renderFooter() {
-  setText("footerTagline", CONFIG.footer.tagline);
-}
-
-function renderAll() {
-  document.documentElement.lang = currentLang;
-
-  renderCompany();
-  renderSections();
-  renderTopStrip();
-  renderNav();
-  renderHero();
-  renderServices();
-  renderStandard();
-  renderGallery();
-  renderProcess();
-  renderSocial();
-  renderArea();
-  renderEstimate();
-  renderFooter();
-}
-
-document.querySelectorAll(".top-lang").forEach(btn => {
-  btn.addEventListener("click", () => {
-    currentLang = btn.dataset.lang;
-    renderAll();
-  });
-});
-
-$("menuButton").addEventListener("click", () => {
-  $("mobileMenu").classList.toggle("open");
-});
-
-$("estimateForm").addEventListener("submit", async event => {
-  event.preventDefault();
-
-  if (CONFIG.estimate.mode === "demo") {
-    alert(
-      currentLang === "en"
-        ? "The estimate form is currently in demo mode."
-        : "El formulario de cotización está actualmente en modo demo."
-    );
-    return;
-  }
-
-  if (!CONFIG.estimate.endpoint) return;
-
-  try {
-    const body = new FormData(event.currentTarget);
-    const response = await fetch(CONFIG.estimate.endpoint, {
-      method: "POST",
-      body
-    });
-
-    if (!response.ok) throw new Error("Failed");
-
-    alert(currentLang === "en" ? "Request sent." : "Solicitud enviada.");
-    event.currentTarget.reset();
-  } catch {
-    alert(
-      currentLang === "en"
-        ? "There was a problem sending your request."
-        : "Hubo un problema enviando tu solicitud."
-    );
-  }
-});
-
-$("year").textContent = new Date().getFullYear();
-
-renderAll();
-const SOCIAL_LOGOS = {
-  "FACEBOOK": "facebook.svg",
-  "WHATSAPP": "whatsapp.svg",
-  "INSTAGRAM": "instagram.svg",
-  "TIKTOK": "tiktok.svg",
-  "GOOGLE REVIEWS": "google-reviews.svg"
-};
-
-function renderSocial() {
-  setText("socialEyebrow", CONFIG.social.eyebrow);
-  setText("socialTitle", CONFIG.social.title);
-  setText("socialLead", CONFIG.social.lead);
+  const SOCIAL_LOGOS = {
+    "FACEBOOK": "facebook.svg",
+    "WHATSAPP": "whatsapp.svg",
+    "INSTAGRAM": "instagram.svg",
+    "TIKTOK": "tiktok.svg",
+    "GOOGLE REVIEWS": "google-reviews.svg"
+  };
 
   const grid = $("socialGrid");
   grid.innerHTML = "";
@@ -412,10 +250,11 @@ function renderSocial() {
       <div class="social-icon">
         ${
           logo
-            ? `<img class="social-brand-logo"
-                    src="./${logo}"
-                    alt="${network.name}"
-                    loading="eager">`
+            ? `<img
+                class="social-brand-logo"
+                src="./${logo}"
+                alt="${network.name}"
+              >`
             : ""
         }
       </div>
