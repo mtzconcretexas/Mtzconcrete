@@ -101,7 +101,22 @@ const CONFIG = {
     interval: 2500,
     images: Array.from({ length: 16 }, (_, i) => `assets/images/gallery/work-${String(i + 1).padStart(2, "0")}.jpg`)
   },
-
+stats: [
+  {
+    value: 21,
+    suffix: "+",
+    label: { en: "YEARS OF EXPERIENCE", es: "AÑOS DE EXPERIENCIA" }
+  },
+  {
+    value: 800,
+    suffix: "+",
+    label: { en: "PROJECTS COMPLETED", es: "PROYECTOS COMPLETADOS" }
+  },
+  {
+    value: null,
+    text: { en: "RESIDENTIAL & COMMERCIAL", es: "RESIDENCIAL Y COMERCIAL" }
+  }
+],
   social: [
     { name: "FACEBOOK", icon: "facebook.svg", url: "" },
     { name: "INSTAGRAM", icon: "instagram.svg", url: "" },
