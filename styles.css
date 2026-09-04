@@ -2254,3 +2254,115 @@ body {
     top: -4px !important;
   }
 }
+.social-card .social-icon {
+  position: relative !important;
+  width: 82px !important;
+  height: 82px !important;
+  min-width: 82px !important;
+  min-height: 82px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.social-card .social-icon svg {
+  display: none !important;
+}
+
+.social-card .social-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+.social-card .social-icon::before {
+  content: "" !important;
+  display: block !important;
+  width: 76px !important;
+  height: 76px !important;
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Real local logo files â€” no CDN, no remote URLs */
+.social-card:nth-child(1) .social-icon::before {
+  background-image: url("assets/icons/facebook.svg") !important;
+  filter: drop-shadow(0 7px 13px rgba(8,102,255,.22)) !important;
+}
+
+.social-card:nth-child(2) .social-icon::before {
+  width: 72px !important;
+  height: 72px !important;
+  background-image: url("assets/icons/whatsapp.svg") !important;
+  filter: drop-shadow(0 7px 13px rgba(37,211,102,.20)) !important;
+}
+
+.social-card:nth-child(3) .social-icon::before {
+  width: 74px !important;
+  height: 74px !important;
+  background-image: url("assets/icons/instagram.svg") !important;
+  filter: drop-shadow(0 8px 15px rgba(214,41,118,.18)) !important;
+}
+
+.social-card:nth-child(4) .social-icon::before {
+  width: 72px !important;
+  height: 72px !important;
+  background-image: url("assets/icons/tiktok.svg") !important;
+  filter: drop-shadow(0 8px 14px rgba(0,0,0,.28)) !important;
+}
+
+.social-card:nth-child(5) .social-icon::before {
+  width: 78px !important;
+  height: 72px !important;
+  background-image: url("assets/icons/google-reviews.svg") !important;
+  filter: drop-shadow(0 7px 13px rgba(251,188,5,.14)) !important;
+}
+
+.social-card:nth-child(1) { border-bottom-color: #0866FF !important; }
+.social-card:nth-child(2) { border-bottom-color: #25D366 !important; }
+.social-card:nth-child(3) { border-bottom-color: #E1306C !important; }
+.social-card:nth-child(4) { border-bottom-color: #25F4EE !important; }
+.social-card:nth-child(5) { border-bottom-color: #FBBC05 !important; }
+
+@media (max-width: 760px) {
+  .social-card .social-icon {
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    min-height: 76px !important;
+  }
+
+  .social-card .social-icon::before {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .social-card:nth-child(2) .social-icon::before,
+  .social-card:nth-child(4) .social-icon::before {
+    width: 65px !important;
+    height: 65px !important;
+  }
+
+  .social-card:nth-child(3) .social-icon::before {
+    width: 67px !important;
+    height: 67px !important;
+  }
+
+  .social-card:nth-child(5) .social-icon::before {
+    width: 70px !important;
+    height: 65px !important;
+  }
+}
