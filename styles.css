@@ -1236,3 +1236,435 @@ button, input, textarea, select { font: inherit; }
     text-align: left;
   }
 }
+/* =========================================================
+   MTZ CONCRETE — PREMIUM BLUE / CEMENT THEME
+   Pegar AL FINAL de styles.css
+   ========================================================= */
+
+:root {
+  /* BLUE */
+  --mtz-blue: #0868d8;
+  --mtz-blue-light: #1680f5;
+  --mtz-blue-dark: #064c9e;
+  --mtz-blue-deep: #04366f;
+
+  /* DARK / CEMENT */
+  --mtz-black: #070c11;
+  --mtz-dark: #0c131a;
+  --mtz-charcoal: #121a22;
+  --mtz-cement-dark: #20272d;
+  --mtz-cement: #343c43;
+  --mtz-cement-medium: #687078;
+  --mtz-cement-light: #d0d1ce;
+  --mtz-concrete-white: #e5e5e1;
+
+  /* TEXT */
+  --mtz-white: #f4f7fa;
+  --mtz-text: #d4d9de;
+  --mtz-muted: #9da6ae;
+
+  /* EFFECTS */
+  --mtz-border: rgba(255,255,255,.12);
+  --mtz-blue-glow: rgba(8,104,216,.38);
+}
+
+
+/* =========================================================
+   GENERAL WEBSITE
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--mtz-dark) !important;
+  color: var(--mtz-text);
+}
+
+
+/* =========================================================
+   DARK CONCRETE TEXTURE
+   ========================================================= */
+
+.hero,
+.hero-section,
+.about,
+.about-section,
+.projects,
+.projects-section,
+.service-areas,
+.service-area,
+.cta-section,
+.contact-section,
+footer,
+.footer,
+.dark-section {
+  background-color: var(--mtz-dark) !important;
+
+  background-image:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255,255,255,.035) 0,
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      rgba(255,255,255,.025) 0,
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.018),
+      rgba(0,0,0,.12)
+    ),
+    repeating-linear-gradient(
+      35deg,
+      rgba(255,255,255,.008) 0px,
+      rgba(255,255,255,.008) 1px,
+      transparent 1px,
+      transparent 4px
+    ) !important;
+}
+
+
+/* =========================================================
+   LIGHT CEMENT SECTIONS
+   ========================================================= */
+
+.services,
+.services-section,
+.process,
+.process-section,
+.testimonials,
+.testimonials-section,
+.light-section {
+  background-color: var(--mtz-concrete-white) !important;
+
+  background-image:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(0,0,0,.035),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(0,0,0,.025),
+      transparent 25%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,.012) 0px,
+      rgba(0,0,0,.012) 1px,
+      transparent 1px,
+      transparent 5px
+    ) !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+header,
+.header,
+.navbar,
+nav {
+  background: rgba(7, 12, 17, .96) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+}
+
+nav a,
+.navbar a,
+.nav-links a {
+  color: var(--mtz-white);
+  transition:
+    color .25s ease,
+    text-shadow .25s ease;
+}
+
+nav a:hover,
+.navbar a:hover,
+.nav-links a:hover {
+  color: var(--mtz-blue-light) !important;
+  text-shadow: 0 0 18px rgba(22,128,245,.25);
+}
+
+
+/* =========================================================
+   REPLACE ORANGE / ACCENT TEXT WITH BLUE
+   ========================================================= */
+
+.accent,
+.highlight,
+.eyebrow,
+.section-label,
+.subtitle,
+.blue-text,
+.orange-text,
+.label,
+.tag {
+  color: var(--mtz-blue) !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTONS
+   ========================================================= */
+
+button,
+.btn,
+.button,
+.btn-primary,
+.primary-btn,
+.cta-btn,
+.cta-button,
+.estimate-btn,
+.hero-btn,
+.nav-cta,
+input[type="submit"] {
+  background:
+    linear-gradient(
+      135deg,
+      var(--mtz-blue-light),
+      var(--mtz-blue),
+      var(--mtz-blue-dark)
+    ) !important;
+
+  color: #ffffff !important;
+
+  border: 1px solid rgba(255,255,255,.12) !important;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25),
+    0 0 0 rgba(8,104,216,0);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease,
+    border-color .25s ease !important;
+}
+
+
+/* BUTTON HOVER — RESALTA COMO QUERÍAS */
+
+button:hover,
+.btn:hover,
+.button:hover,
+.btn-primary:hover,
+.primary-btn:hover,
+.cta-btn:hover,
+.cta-button:hover,
+.estimate-btn:hover,
+.hero-btn:hover,
+.nav-cta:hover,
+input[type="submit"]:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #1888ff,
+      #0872e8,
+      #0756b3
+    ) !important;
+
+  transform: translateY(-3px);
+
+  border-color: rgba(69,160,255,.7) !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.35),
+    0 0 18px rgba(8,104,216,.40),
+    0 0 42px rgba(8,104,216,.18) !important;
+}
+
+
+button:active,
+.btn:active,
+.button:active,
+.cta-button:active {
+  transform: translateY(-1px) scale(.98);
+}
+
+
+/* =========================================================
+   SECONDARY / OUTLINE BUTTON
+   ========================================================= */
+
+.btn-secondary,
+.secondary-btn,
+.btn-outline,
+.outline-btn,
+.call-btn {
+  background: rgba(8,14,20,.55) !important;
+
+  border: 1px solid rgba(255,255,255,.50) !important;
+
+  color: var(--mtz-white) !important;
+
+  backdrop-filter: blur(5px);
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    border .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease !important;
+}
+
+.btn-secondary:hover,
+.secondary-btn:hover,
+.btn-outline:hover,
+.outline-btn:hover,
+.call-btn:hover {
+  background: rgba(8,104,216,.15) !important;
+
+  color: #ffffff !important;
+
+  border-color: var(--mtz-blue-light) !important;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 20px rgba(8,104,216,.25),
+    inset 0 0 18px rgba(8,104,216,.08);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card,
+.service-card,
+.project-card,
+.feature-card,
+.testimonial-card,
+.area-card,
+.process-card {
+  border: 1px solid rgba(255,255,255,.10);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+
+/* PREMIUM CARD HOVER */
+
+.card:hover,
+.service-card:hover,
+.project-card:hover,
+.feature-card:hover,
+.testimonial-card:hover,
+.area-card:hover,
+.process-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(8,104,216,.55);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.22),
+    0 0 24px rgba(8,104,216,.12);
+}
+
+
+/* =========================================================
+   ICONS / CHECKMARKS
+   ========================================================= */
+
+.icon,
+.check,
+.checkmark,
+.service-icon,
+.feature-icon,
+.process-icon,
+svg.accent-icon {
+  color: var(--mtz-blue) !important;
+}
+
+.service-icon svg,
+.feature-icon svg,
+.process-icon svg {
+  stroke: var(--mtz-blue) !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  transition:
+    color .25s ease,
+    opacity .25s ease;
+}
+
+a:hover {
+  color: var(--mtz-blue-light);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+input,
+textarea,
+select {
+  background: rgba(8,14,20,.80);
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  color: var(--mtz-white);
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+
+  border-color: var(--mtz-blue) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(8,104,216,.12),
+    0 0 18px rgba(8,104,216,.12);
+}
+
+
+/* =========================================================
+   TEXT SELECTION — LITTLE PREMIUM DETAIL
+   ========================================================= */
+
+::selection {
+  background: var(--mtz-blue);
+  color: white;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mtz-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mtz-cement);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mtz-blue);
+}
