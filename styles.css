@@ -1,9 +1,3 @@
-/*
-=====================================================================
- MTZ CONCRETE — ORIGINAL LOOK REBUILD
- Mobile styling is based directly on the supplied original screenshots.
-=====================================================================
-*/
 
 :root {
   --orange: #f4510b;
@@ -40,7 +34,7 @@ button, input, textarea, select { font: inherit; }
   margin: 0 auto;
 }
 
-/* ---------- TOP STRIP ---------- */
+
 
 .top-strip {
   background: var(--orange);
@@ -75,7 +69,7 @@ button, input, textarea, select { font: inherit; }
 
 .top-lang.active { color: #fff; }
 
-/* ---------- NAV ---------- */
+
 
 .site-header {
   position: sticky;
@@ -178,7 +172,7 @@ button, input, textarea, select { font: inherit; }
   font-weight: 700;
 }
 
-/* ---------- SHARED ---------- */
+
 
 .section-cream { background: var(--cream); }
 .section-black { background: #101010; color: #fff; }
@@ -225,7 +219,7 @@ button, input, textarea, select { font: inherit; }
   line-height: 1.65;
 }
 
-/* ---------- HERO ---------- */
+
 
 .hero {
   position: relative;
@@ -336,7 +330,7 @@ button, input, textarea, select { font: inherit; }
   font-size: 18px;
 }
 
-/* ---------- SERVICES ---------- */
+
 
 .services {
   padding: 110px 0 120px;
@@ -466,7 +460,6 @@ button, input, textarea, select { font: inherit; }
   letter-spacing: 1.1px;
 }
 
-/* ---------- STANDARD ---------- */
 
 .standard {
   padding: 110px 0 120px;
@@ -508,7 +501,6 @@ button, input, textarea, select { font: inherit; }
   line-height: 1.7;
 }
 
-/* ---------- GALLERY ---------- */
 
 .gallery-section {
   padding: 110px 0;
@@ -550,7 +542,7 @@ button, input, textarea, select { font: inherit; }
   display: block;
 }
 
-/* ---------- PROCESS ---------- */
+
 
 .process {
   padding: 110px 0 125px;
@@ -594,7 +586,6 @@ button, input, textarea, select { font: inherit; }
   line-height: 1.7;
 }
 
-/* ---------- SOCIAL ---------- */
 
 .social {
   position: relative;
