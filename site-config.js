@@ -296,11 +296,12 @@ services: [
       es: "Encuentra MTZ Concrete en redes sociales para ver proyectos, trabajos recientes y más."
     },
 networks: [
-      { number: "01", icon: "people", name: "FACEBOOK", url: "" },
-      { number: "02", icon: "bubble", name: "WHATSAPP", url: "" },
-      { number: "03", icon: "camera", name: "INSTAGRAM", url: "" },
-      { number: "04", icon: "music", name: "TIKTOK", url: "" }
-    ]
+  { number: "01", icon: "people", name: "FACEBOOK", url: "" },
+  { number: "02", icon: "bubble", name: "WHATSAPP", url: "" },
+  { number: "03", icon: "camera", name: "INSTAGRAM", url: "" },
+  { number: "04", icon: "music", name: "TIKTOK", url: "" },
+  { number: "05", icon: "star", name: "GOOGLE REVIEWS", url: "" }
+]
   },
 
   serviceArea: {
