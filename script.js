@@ -101,6 +101,60 @@ function renderSocial() {
   }).join("");
 }
 
+function renderStats() {
+  const projects = document.querySelector("#projects");
+  if (!projects || document.querySelector("#mtzStats")) return;
+
+  const section = document.createElement("section");
+  section.id = "mtzStats";
+  section.className = "mtz-stats";
+
+  section.innerHTML = `
+    <div class="mtz-stats-inner">
+      ${CONFIG.stats.map(item => `
+        <div class="mtz-stat">
+          ${
+            item.value !== null
+              ? `<strong class="mtz-counter" data-target="${item.value}" data-suffix="${item.suffix || ""}">0</strong>
+                 <span>${t(item.label)}</span>`
+              : `<strong class="mtz-stat-text">${t(item.text)}</strong>`
+          }
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  projects.parentNode.insertBefore(section, projects);
+
+  const counters = section.querySelectorAll(".mtz-counter");
+
+  const observer = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting) return;
+
+    counters.forEach(counter => {
+      const target = Number(counter.dataset.target);
+      const suffix = counter.dataset.suffix || "";
+      const duration = 1600;
+      const start = performance.now();
+
+      function animate(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = Math.floor(target * eased) + suffix;
+
+        if (progress < 1) requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    });
+
+    observer.disconnect();
+  }, { threshold: 0.35 });
+
+  observer.observe(section);
+}
+
+function renderLanguage() {
 function renderLanguage() {
   document.documentElement.lang = currentLang;
   $("topStripText").textContent = t(CONFIG.topStrip);
@@ -114,6 +168,7 @@ document.querySelectorAll(".top-lang").forEach(btn => btn.onclick = () => { curr
 $("estimateForm").addEventListener("submit", e => { e.preventDefault(); $("formNote").textContent = currentLang === "en" ? "Thank you. Your request is ready to be connected to the quote system." : "Gracias. Tu solicitud está lista para conectarse al sistema de cotizaciones."; });
 
 renderCompany();
+renderStats();
 renderSocial();
 renderLanguage();
 $("year").textContent = new Date().getFullYear();
