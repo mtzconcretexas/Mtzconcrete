@@ -376,3 +376,54 @@ $("estimateForm").addEventListener("submit", async event => {
 $("year").textContent = new Date().getFullYear();
 
 renderAll();
+const SOCIAL_LOGOS = {
+  "FACEBOOK": "facebook.svg",
+  "WHATSAPP": "whatsapp.svg",
+  "INSTAGRAM": "instagram.svg",
+  "TIKTOK": "tiktok.svg",
+  "GOOGLE REVIEWS": "google-reviews.svg"
+};
+
+function renderSocial() {
+  setText("socialEyebrow", CONFIG.social.eyebrow);
+  setText("socialTitle", CONFIG.social.title);
+  setText("socialLead", CONFIG.social.lead);
+
+  const grid = $("socialGrid");
+  grid.innerHTML = "";
+
+  CONFIG.social.networks.forEach(network => {
+    const hasUrl = Boolean(network.url);
+    const card = document.createElement(hasUrl ? "a" : "div");
+
+    card.className = "social-card";
+
+    if (hasUrl) {
+      card.href = network.url;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+    }
+
+    const logo = SOCIAL_LOGOS[network.name.toUpperCase()] || "";
+
+    card.innerHTML = `
+      <span class="social-number">${network.number}</span>
+
+      <div class="social-icon">
+        ${
+          logo
+            ? `<img class="social-brand-logo"
+                    src="./${logo}"
+                    alt="${network.name}"
+                    loading="eager">`
+            : ""
+        }
+      </div>
+
+      <h3>${network.name}</h3>
+      <p>MTZ CONCRETE</p>
+    `;
+
+    grid.appendChild(card);
+  });
+}
