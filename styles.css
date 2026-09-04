@@ -2041,3 +2041,216 @@ body {
     height: 54px !important;
   }
 }
+/* =========================================================
+   MTZ SOCIAL — REAL BRAND SVG OVERRIDE
+   Pegar HASTA MERO ABAJO del styles.css
+   ========================================================= */
+
+/* Quitar TODOS los badges, outlines y efectos viejos */
+.social-card .social-icon {
+  position: relative !important;
+
+  width: 78px !important;
+  height: 78px !important;
+  min-width: 78px !important;
+  min-height: 78px !important;
+
+  display: grid !important;
+  place-items: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+  filter: none !important;
+
+  overflow: visible !important;
+}
+
+/* Desactivar cualquier SVG viejo del HTML */
+.social-card .social-icon svg {
+  display: none !important;
+}
+
+/* Base para los logos REALES */
+.social-card .social-icon::before {
+  content: "" !important;
+
+  display: block !important;
+
+  width: 70px !important;
+  height: 70px !important;
+
+  position: relative !important;
+  z-index: 2 !important;
+
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+
+  -webkit-mask: none !important;
+  mask: none !important;
+
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Quitar adornos viejos */
+.social-card .social-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* =======================
+   FACEBOOK
+   ======================= */
+
+.social-card:nth-child(1) .social-icon::before {
+  width: 70px !important;
+  height: 70px !important;
+
+  background-image:
+    url("https://brandlogos.sgp1.digitaloceanspaces.com/svg/logos/facebook.svg") !important;
+}
+
+
+/* =======================
+   WHATSAPP
+   ======================= */
+
+.social-card:nth-child(2) .social-icon::before {
+  width: 70px !important;
+  height: 70px !important;
+
+  background-image:
+    url("https://dl.svgcdn.com/svg/logos/whatsapp-icon.svg") !important;
+}
+
+
+/* =======================
+   INSTAGRAM
+   ======================= */
+
+.social-card:nth-child(3) .social-icon::before {
+  width: 72px !important;
+  height: 72px !important;
+
+  background-image:
+    url("https://dl.svgcdn.com/svg/logos/instagram-icon.svg") !important;
+}
+
+
+/* =======================
+   TIKTOK
+   ======================= */
+
+.social-card:nth-child(4) .social-icon::before {
+  width: 70px !important;
+  height: 70px !important;
+
+  background-image:
+    url("https://brandlogos.sgp1.digitaloceanspaces.com/svg/logos/tiktok-icon.svg") !important;
+}
+
+
+/* =======================
+   GOOGLE REVIEWS
+   ======================= */
+
+.social-card:nth-child(5) .social-icon::before {
+  width: 66px !important;
+  height: 66px !important;
+
+  background-image:
+    url("https://brandlogos.sgp1.digitaloceanspaces.com/svg/logos/google-icon.svg") !important;
+}
+
+/* Estrellita separada — NO altera la G */
+.social-card:nth-child(5) .social-icon::after {
+  content: "★" !important;
+
+  display: block !important;
+  position: absolute !important;
+
+  right: -3px !important;
+  top: -5px !important;
+
+  z-index: 4 !important;
+
+  color: #fbbc05 !important;
+
+  font-size: 22px !important;
+  line-height: 1 !important;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,.38) !important;
+}
+
+
+/* =======================
+   COLORES DE LAS CARDS
+   ======================= */
+
+.social-card:nth-child(1) {
+  border-bottom-color: #1877F2 !important;
+}
+
+.social-card:nth-child(2) {
+  border-bottom-color: #25D366 !important;
+}
+
+.social-card:nth-child(3) {
+  border-bottom-color: #E1306C !important;
+}
+
+.social-card:nth-child(4) {
+  border-bottom-color: #25F4EE !important;
+}
+
+.social-card:nth-child(5) {
+  border-bottom-color: #FBBC05 !important;
+}
+
+
+/* =======================
+   MOBILE
+   ======================= */
+
+@media (max-width: 760px) {
+
+  .social-card .social-icon {
+    width: 72px !important;
+    height: 72px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+  }
+
+  .social-card .social-icon::before {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .social-card:nth-child(3) .social-icon::before {
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  .social-card:nth-child(5) .social-icon::before {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .social-card:nth-child(5) .social-icon::after {
+    font-size: 19px !important;
+    right: -2px !important;
+    top: -4px !important;
+  }
+}
