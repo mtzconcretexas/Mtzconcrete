@@ -1934,3 +1934,110 @@ body {
     height: 80px;
   }
 }
+.social-card .social-icon {
+  width: 66px !important;
+  height: 66px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.social-card .social-icon svg {
+  display: none !important;
+}
+
+.social-card .social-icon::before {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 58px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.social-card:nth-child(1) .social-icon::before {
+  background: #1877f2;
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg");
+  mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg");
+}
+
+.social-card:nth-child(2) .social-icon::before {
+  background: #25d366;
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/whatsapp.svg");
+  mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/whatsapp.svg");
+}
+
+.social-card:nth-child(3) .social-icon::before {
+  background:
+    radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 40%,
+      #d6249f 62%,
+      #285aeb 90%
+    );
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg");
+  mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg");
+}
+
+.social-card:nth-child(4) .social-icon::before {
+  background: #ffffff;
+  -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tiktok.svg");
+  mask-image: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tiktok.svg");
+  filter:
+    drop-shadow(-2px 0 0 #25f4ee)
+    drop-shadow(2px 0 0 #fe2c55);
+}
+
+.social-card:nth-child(5) .social-icon::before {
+  width: 60px;
+  height: 60px;
+  background:
+    url("https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png")
+    center / contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.social-card:nth-child(5) .social-icon::after {
+  content: "★";
+  position: absolute;
+  margin-left: 48px;
+  margin-top: -42px;
+  color: #fbbc04;
+  font-size: 18px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.social-card:nth-child(1) {
+  border-bottom-color: #1877f2 !important;
+}
+
+.social-card:nth-child(2) {
+  border-bottom-color: #25d366 !important;
+}
+
+.social-card:nth-child(3) {
+  border-bottom-color: #e1306c !important;
+}
+
+.social-card:nth-child(4) {
+  border-bottom-color: #25f4ee !important;
+}
+
+.social-card:nth-child(5) {
+  border-bottom-color: #fbbc04 !important;
+}
