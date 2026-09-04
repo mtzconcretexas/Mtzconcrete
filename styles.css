@@ -2366,3 +2366,187 @@ body {
     height: 65px !important;
   }
 }
+/* =========================================================
+   MTZ SOCIAL LOGOS — LOCAL FILES FINAL OVERRIDE
+   ========================================================= */
+
+html body .social-grid .social-card .social-icon {
+  position: relative !important;
+  width: 84px !important;
+  height: 84px !important;
+  min-width: 84px !important;
+  min-height: 84px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+  filter: none !important;
+
+  overflow: visible !important;
+}
+
+
+/* MATAR TODOS LOS ICONOS VIEJOS DEL CSS */
+
+html body .social-grid .social-card .social-icon::before,
+html body .social-grid .social-card .social-icon::after {
+  content: none !important;
+  display: none !important;
+
+  background: none !important;
+  background-image: none !important;
+
+  -webkit-mask: none !important;
+  mask: none !important;
+
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+
+html body .social-grid .social-card .social-icon > svg {
+  display: none !important;
+}
+
+
+/* LOGO REAL */
+
+html body .social-grid .social-card .social-brand-logo {
+  display: block !important;
+
+  width: 76px !important;
+  height: 76px !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+
+/* FACEBOOK */
+
+html body .social-grid .social-card:nth-child(1) .social-brand-logo {
+  width: 72px !important;
+  height: 72px !important;
+
+  filter:
+    drop-shadow(0 8px 14px rgba(8,102,255,.22)) !important;
+}
+
+
+/* WHATSAPP */
+
+html body .social-grid .social-card:nth-child(2) .social-brand-logo {
+  width: 72px !important;
+  height: 72px !important;
+
+  filter:
+    drop-shadow(0 8px 14px rgba(37,211,102,.18)) !important;
+}
+
+
+/* INSTAGRAM */
+
+html body .social-grid .social-card:nth-child(3) .social-brand-logo {
+  width: 75px !important;
+  height: 75px !important;
+
+  filter:
+    drop-shadow(0 8px 15px rgba(214,41,118,.20)) !important;
+}
+
+
+/* TIKTOK */
+
+html body .social-grid .social-card:nth-child(4) .social-brand-logo {
+  width: 72px !important;
+  height: 78px !important;
+
+  filter:
+    drop-shadow(0 9px 15px rgba(0,0,0,.32)) !important;
+}
+
+
+/* GOOGLE REVIEWS
+   La estrella YA VIENE dentro del archivo SVG
+*/
+
+html body .social-grid .social-card:nth-child(5) .social-brand-logo {
+  width: 82px !important;
+  height: 76px !important;
+
+  filter:
+    drop-shadow(0 8px 14px rgba(251,188,5,.16)) !important;
+}
+
+
+/* LÍNEAS INFERIORES */
+
+html body .social-grid .social-card:nth-child(1) {
+  border-bottom-color: #0866FF !important;
+}
+
+html body .social-grid .social-card:nth-child(2) {
+  border-bottom-color: #25D366 !important;
+}
+
+html body .social-grid .social-card:nth-child(3) {
+  border-bottom-color: #E1306C !important;
+}
+
+html body .social-grid .social-card:nth-child(4) {
+  border-bottom-color: #25F4EE !important;
+}
+
+html body .social-grid .social-card:nth-child(5) {
+  border-bottom-color: #FBBC05 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  html body .social-grid .social-card .social-icon {
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    min-height: 76px !important;
+  }
+
+  html body .social-grid .social-card .social-brand-logo {
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  html body .social-grid .social-card:nth-child(4) .social-brand-logo {
+    height: 70px !important;
+  }
+
+  html body .social-grid .social-card:nth-child(5) .social-brand-logo {
+    width: 74px !important;
+    height: 68px !important;
+  }
+}
