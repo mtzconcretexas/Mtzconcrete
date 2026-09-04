@@ -1832,3 +1832,156 @@ body {
 .social-card:nth-child(3) { border-bottom-color: #E1306C !important; }
 .social-card:nth-child(4) { border-bottom-color: #25F4EE !important; }
 .social-card:nth-child(5) { border-bottom-color: #FABB05 !important; }
+/* =========================================================
+   FINAL SOCIAL ICON OVERRIDE — PREMIUM BADGES
+   Pegar hasta el final del styles.css
+   ========================================================= */
+
+.social-card .social-icon {
+  position: relative !important;
+  width: 88px !important;
+  height: 88px !important;
+  min-width: 88px !important;
+  min-height: 88px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025) 38%, rgba(0,0,0,.22)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 0 1px rgba(255,255,255,.02) !important;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.social-card .social-icon::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  pointer-events: none !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.04),
+    inset 0 -10px 20px rgba(0,0,0,.10) !important;
+}
+
+.social-card .social-icon svg {
+  display: none !important;
+}
+
+.social-card .social-icon::before {
+  content: "" !important;
+  display: block !important;
+  width: 54px !important;
+  height: 54px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  filter: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Facebook */
+.social-card:nth-child(1) .social-icon {
+  border-color: rgba(24,119,242,.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 24px rgba(24,119,242,.14) !important;
+}
+
+.social-card:nth-child(1) .social-icon::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231877F2' d='M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.019 10.125 11.927v-8.438H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.684 4.533-4.684 1.312 0 2.686.236 2.686.236v2.96h-1.513c-1.491 0-1.956.931-1.956 1.887v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.092 24 18.092 24 12.073z'/%3E%3C/svg%3E") !important;
+}
+
+/* WhatsApp */
+.social-card:nth-child(2) .social-icon {
+  border-color: rgba(37,211,102,.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 24px rgba(37,211,102,.14) !important;
+}
+
+.social-card:nth-child(2) .social-icon::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2325D366' d='M16 3C8.8 3 3 8.7 3 15.8c0 2.4.7 4.8 2 6.8L3.3 29l6.6-1.7c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.9C29 8.7 23.2 3 16 3Z'/%3E%3Cpath fill='%23fff' d='M22.7 18.8c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.3-.5.3-.8.1-.4-.2-1.6-.6-2.9-1.8-1-.9-1.8-2.1-2-2.5-.2-.4 0-.6.2-.7l.6-.7c.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.7-1.7-1.2-2.8-.3-.9-.7-.8-.9-.8h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.4-1.4 3.3s1.4 3.8 1.6 4 .1.2.3.4c1.1 1.8 2.5 3.1 4.3 4 2.3 1.1 3.3 1.2 4.4 1 1-.2 2.2-1 2.5-2 .2-.9.2-1.7.1-1.9-.1-.2-.4-.3-.8-.6Z'/%3E%3C/svg%3E") !important;
+}
+
+/* Instagram */
+.social-card:nth-child(3) .social-icon {
+  border-color: rgba(225,48,108,.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 24px rgba(225,48,108,.14) !important;
+}
+
+.social-card:nth-child(3) .social-icon::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='ig' x1='0' y1='64' x2='64' y2='0'%3E%3Cstop offset='0' stop-color='%23FEDA75'/%3E%3Cstop offset='.28' stop-color='%23FA7E1E'/%3E%3Cstop offset='.5' stop-color='%23D62976'/%3E%3Cstop offset='.72' stop-color='%23962FBF'/%3E%3Cstop offset='1' stop-color='%234F5BD5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='9' y='9' width='46' height='46' rx='14' fill='url(%23ig)'/%3E%3Ccircle cx='32' cy='32' r='10' fill='none' stroke='white' stroke-width='4.7'/%3E%3Ccircle cx='47' cy='17.5' r='3.1' fill='white'/%3E%3Crect x='18' y='18' width='28' height='28' rx='8.5' fill='none' stroke='white' stroke-width='4.7'/%3E%3C/svg%3E") !important;
+}
+
+/* TikTok */
+.social-card:nth-child(4) .social-icon {
+  border-color: rgba(37,244,238,.34) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 24px rgba(37,244,238,.10) !important;
+}
+
+.social-card:nth-child(4) .social-icon::before {
+  width: 56px !important;
+  height: 56px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2325F4EE' transform='translate(-1.6,-1)' d='M37.2 8c.6 4.1 2.9 7.4 6.4 9.5 2.2 1.3 4.5 2 6.9 2.1v8.4c-4.2-.2-8.2-1.5-11.8-3.6v17.2c0 9.7-7.9 17.5-17.6 17.5S3.5 51.3 3.5 41.6c0-9.1 6.9-16.6 15.8-17.5v9.2c-4.8.6-8.4 4.6-8.4 9.4 0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8V8h6.7Z'/%3E%3Cpath fill='%23FE2C55' transform='translate(1.6,1)' d='M37.2 8c.6 4.1 2.9 7.4 6.4 9.5 2.2 1.3 4.5 2 6.9 2.1v8.4c-4.2-.2-8.2-1.5-11.8-3.6v17.2c0 9.7-7.9 17.5-17.6 17.5S3.5 51.3 3.5 41.6c0-9.1 6.9-16.6 15.8-17.5v9.2c-4.8.6-8.4 4.6-8.4 9.4 0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8V8h6.7Z'/%3E%3Cpath fill='white' d='M37.2 8c.6 4.1 2.9 7.4 6.4 9.5 2.2 1.3 4.5 2 6.9 2.1v8.4c-4.2-.2-8.2-1.5-11.8-3.6v17.2c0 9.7-7.9 17.5-17.6 17.5S3.5 51.3 3.5 41.6c0-9.1 6.9-16.6 15.8-17.5v9.2c-4.8.6-8.4 4.6-8.4 9.4 0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8V8h6.7Z'/%3E%3C/svg%3E") !important;
+}
+
+/* Google Reviews */
+.social-card:nth-child(5) .social-icon {
+  border-color: rgba(251,188,5,.34) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 14px 30px rgba(0,0,0,.26),
+    0 0 24px rgba(251,188,5,.10) !important;
+}
+
+.social-card:nth-child(5) .social-icon::before {
+  width: 60px !important;
+  height: 60px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234285F4' d='M23.766 12.276c0-.815-.066-1.584-.19-2.324H12.24v4.4h6.482c-.28 1.482-1.125 2.738-2.4 3.586v2.98h3.88c2.27-2.09 3.564-5.174 3.564-8.642z'/%3E%3Cpath fill='%2334A853' d='M12.24 24c3.24 0 5.956-1.074 7.94-2.908l-3.88-2.98c-1.077.72-2.455 1.145-4.06 1.145-3.12 0-5.765-2.107-6.71-4.94H1.52v3.092A11.997 11.997 0 0 0 12.24 24z'/%3E%3Cpath fill='%23FBBC05' d='M5.53 14.317A7.217 7.217 0 0 1 5.16 12c0-.806.14-1.587.37-2.317V6.59H1.52A11.997 11.997 0 0 0 0 12c0 1.936.464 3.768 1.52 5.41l4.01-3.093z'/%3E%3Cpath fill='%23EA4335' d='M12.24 4.745c1.77 0 3.35.61 4.6 1.81l3.45-3.45C18.19 1.09 15.47 0 12.24 0A11.997 11.997 0 0 0 1.52 6.59L5.53 9.683c.945-2.833 3.59-4.938 6.71-4.938z'/%3E%3C/svg%3E") !important;
+}
+
+/* Mantener color inferior de cada card */
+.social-card:nth-child(1) { border-bottom-color: #1877F2 !important; }
+.social-card:nth-child(2) { border-bottom-color: #25D366 !important; }
+.social-card:nth-child(3) { border-bottom-color: #E1306C !important; }
+.social-card:nth-child(4) { border-bottom-color: #25F4EE !important; }
+.social-card:nth-child(5) { border-bottom-color: #FABB05 !important; }
+
+@media (max-width: 760px) {
+  .social-card .social-icon {
+    width: 82px !important;
+    height: 82px !important;
+    min-width: 82px !important;
+    min-height: 82px !important;
+  }
+
+  .social-card .social-icon::before {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .social-card:nth-child(5) .social-icon::before {
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
