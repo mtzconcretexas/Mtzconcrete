@@ -121,7 +121,7 @@ const CONFIG = {
 
   social: [
     { name: "FACEBOOK", icon: "facebook.svg", url: "" },
-    { name: "INSTAGRAM", icon: "instagram.svg", url: "" },
+    { name: "INSTAGRAM", icon: "instagram.svg", url: "https://www.instagram.com/mtzconcreteatx?utm_source=ig_contact_invite" },
     { name: "TIKTOK", icon: "tiktok.svg", url: "" },
     { name: "WHATSAPP", icon: "whatsapp.svg", url: "" },
     { name: "GOOGLE REVIEWS", icon: "google-reviews.svg", url: "https://g.page/r/CZKAN14iagSgECE/review" }
