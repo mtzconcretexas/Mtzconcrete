@@ -124,6 +124,6 @@ const CONFIG = {
     { name: "INSTAGRAM", icon: "instagram.svg", url: "" },
     { name: "TIKTOK", icon: "tiktok.svg", url: "" },
     { name: "WHATSAPP", icon: "whatsapp.svg", url: "" },
-    { name: "GOOGLE REVIEWS", icon: "google-reviews.svg", url: "" }
+    { name: "GOOGLE REVIEWS", icon: "google-reviews.svg", url: "https://g.page/r/CZKAN14iagSgECE/review" }
   ]
 };
