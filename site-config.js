@@ -122,7 +122,7 @@ const CONFIG = {
   social: [
     { name: "FACEBOOK", icon: "facebook.svg", url: "https://www.facebook.com/share/1CpFciQWQ5/?mibextid=wwXIfr" },
     { name: "INSTAGRAM", icon: "instagram.svg", url: "https://www.instagram.com/mtzconcreteatx?utm_source=ig_contact_invite" },
-    { name: "TIKTOK", icon: "tiktok.svg", url: "" },
+    { name: "TIKTOK", icon: "tiktok.svg", url: "https://www.tiktok.com/@concreteksm?_r=1&_t=ZT-99U11jn7itJ" },
     { name: "WHATSAPP", icon: "whatsapp.svg", url: "" },
     { name: "GOOGLE REVIEWS", icon: "google-reviews.svg", url: "https://g.page/r/CZKAN14iagSgECE/review" }
   ]
